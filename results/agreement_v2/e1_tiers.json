@@ -1,0 +1,246 @@
+{
+  "git_revision": "af0ee770569a0cc5e5a2b3ffe55175cb15fc1abe",
+  "frozen_arm": "+all+twoway+offset_aware",
+  "tier_order": [
+    "easy",
+    "medium",
+    "hard"
+  ],
+  "tier_git_revisions": {
+    "easy": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b",
+    "medium": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b",
+    "hard": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b"
+  },
+  "tier_instance_git_revisions": {
+    "easy": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b",
+    "medium": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b",
+    "hard": "f77df32c5a09408d83a09a8de13e4a9f83b4e69b"
+  },
+  "full_ladder": {
+    "flag_none": {
+      "easy": {
+        "detection_rate_pooled": 0.0,
+        "false_error_rate_clean_only": 0.0
+      },
+      "medium": {
+        "detection_rate_pooled": 0.0,
+        "false_error_rate_clean_only": 0.0
+      },
+      "hard": {
+        "detection_rate_pooled": 0.0,
+        "false_error_rate_clean_only": 0.0
+      }
+    },
+    "flag_all": {
+      "easy": {
+        "detection_rate_pooled": 1.0,
+        "false_error_rate_clean_only": 1.0
+      },
+      "medium": {
+        "detection_rate_pooled": 1.0,
+        "false_error_rate_clean_only": 1.0
+      },
+      "hard": {
+        "detection_rate_pooled": 1.0,
+        "false_error_rate_clean_only": 1.0
+      }
+    },
+    "baseline_envelope": {
+      "easy": {
+        "detection_rate_pooled": 0.9771,
+        "false_error_rate_clean_only": 0.3792
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9771,
+        "false_error_rate_clean_only": 0.4792
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9771,
+        "false_error_rate_clean_only": 0.5333
+      }
+    },
+    "baseline_symmetric": {
+      "easy": {
+        "detection_rate_pooled": 0.9938,
+        "false_error_rate_clean_only": 0.4625
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9885,
+        "false_error_rate_clean_only": 0.5375
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9833,
+        "false_error_rate_clean_only": 0.5667
+      }
+    },
+    "baseline_coherent": {
+      "easy": {
+        "detection_rate_pooled": 0.9927,
+        "false_error_rate_clean_only": 0.4583
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9844,
+        "false_error_rate_clean_only": 0.525
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9802,
+        "false_error_rate_clean_only": 0.5625
+      }
+    },
+    "baseline_pairwise": {
+      "easy": {
+        "detection_rate_pooled": 0.9885,
+        "false_error_rate_clean_only": 0.4417
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9854,
+        "false_error_rate_clean_only": 0.5292
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9823,
+        "false_error_rate_clean_only": 0.5625
+      }
+    },
+    "geometry": {
+      "easy": {
+        "detection_rate_pooled": 0.7312,
+        "false_error_rate_clean_only": 0.1292
+      },
+      "medium": {
+        "detection_rate_pooled": 0.7115,
+        "false_error_rate_clean_only": 0.2125
+      },
+      "hard": {
+        "detection_rate_pooled": 0.6625,
+        "false_error_rate_clean_only": 0.2125
+      }
+    },
+    "+offset": {
+      "easy": {
+        "detection_rate_pooled": 0.724,
+        "false_error_rate_clean_only": 0.1208
+      },
+      "medium": {
+        "detection_rate_pooled": 0.6948,
+        "false_error_rate_clean_only": 0.1792
+      },
+      "hard": {
+        "detection_rate_pooled": 0.651,
+        "false_error_rate_clean_only": 0.1958
+      }
+    },
+    "+temporal": {
+      "easy": {
+        "detection_rate_pooled": 0.7292,
+        "false_error_rate_clean_only": 0.125
+      },
+      "medium": {
+        "detection_rate_pooled": 0.7115,
+        "false_error_rate_clean_only": 0.2083
+      },
+      "hard": {
+        "detection_rate_pooled": 0.6594,
+        "false_error_rate_clean_only": 0.2042
+      }
+    },
+    "+offset+temporal": {
+      "easy": {
+        "detection_rate_pooled": 0.7219,
+        "false_error_rate_clean_only": 0.1167
+      },
+      "medium": {
+        "detection_rate_pooled": 0.6948,
+        "false_error_rate_clean_only": 0.175
+      },
+      "hard": {
+        "detection_rate_pooled": 0.65,
+        "false_error_rate_clean_only": 0.1917
+      }
+    },
+    "geometry+twoway": {
+      "easy": {
+        "detection_rate_pooled": 0.974,
+        "false_error_rate_clean_only": 0.2
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9781,
+        "false_error_rate_clean_only": 0.3875
+      },
+      "hard": {
+        "detection_rate_pooled": 0.974,
+        "false_error_rate_clean_only": 0.4875
+      }
+    },
+    "+offset+twoway": {
+      "easy": {
+        "detection_rate_pooled": 0.9708,
+        "false_error_rate_clean_only": 0.1958
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9719,
+        "false_error_rate_clean_only": 0.3583
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9688,
+        "false_error_rate_clean_only": 0.475
+      }
+    },
+    "+temporal+twoway": {
+      "easy": {
+        "detection_rate_pooled": 0.974,
+        "false_error_rate_clean_only": 0.1958
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9781,
+        "false_error_rate_clean_only": 0.3875
+      },
+      "hard": {
+        "detection_rate_pooled": 0.974,
+        "false_error_rate_clean_only": 0.4833
+      }
+    },
+    "+all+twoway": {
+      "easy": {
+        "detection_rate_pooled": 0.9708,
+        "false_error_rate_clean_only": 0.1917
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9719,
+        "false_error_rate_clean_only": 0.3583
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9688,
+        "false_error_rate_clean_only": 0.475
+      }
+    },
+    "+all+twoway+offset_aware": {
+      "easy": {
+        "detection_rate_pooled": 0.9563,
+        "false_error_rate_clean_only": 0.1875
+      },
+      "medium": {
+        "detection_rate_pooled": 0.9635,
+        "false_error_rate_clean_only": 0.3542
+      },
+      "hard": {
+        "detection_rate_pooled": 0.9604,
+        "false_error_rate_clean_only": 0.4708
+      }
+    }
+  },
+  "tier_expectation_check": {
+    "pooled_detection": [
+      0.9563,
+      0.9635,
+      0.9604
+    ],
+    "pooled_detection_non_increasing_easy_to_hard": false,
+    "clean_flag_rate": [
+      0.1875,
+      0.3542,
+      0.4708
+    ],
+    "clean_flag_rate_non_decreasing_easy_to_hard": true,
+    "both_hold": false
+  }
+}

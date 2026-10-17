@@ -1,0 +1,74 @@
+# PCCV-Bench hard tier, v1.2-fitted-derived (PREREGISTRATION.md §6).
+# Derived from medium_v1_2_fitted.yaml by pccv_bench/make_tier_configs.py:
+# jitter_px_sigma, miss_rate, fp_rate, and merge_rate (pooled block and every
+# per_camera_noise entry) scaled x1.5, capped at 1. occlusion_rate set to
+# 0.2. Every other field (split_rate, fp_size_frac, score_mean,
+# score_sigma, noise_version, n_instances_per_class, seed, twoway_threshold,
+# cameras) is unchanged from medium_v1_2_fitted.yaml.
+
+noise_version: v1.2-fitted
+n_instances_per_class: 240
+seed: 42
+occlusion_rate: 0.2
+twoway_threshold: 0.7
+cameras:
+- cam1
+- cam2
+- cam3
+- cam4
+- cam5
+- cam6
+noise:
+  miss_rate: 0.3569937369519833
+  fp_rate: 0.017509727626459144
+  fp_size_frac:
+  - 0.00257664988732024
+  - 0.03846909753983179
+  jitter_px_sigma: 21.800286890376725
+  split_rate: 0.0
+  merge_rate: 0.07515657620041755
+  score_mean: 0.75
+  score_sigma: 0.12
+per_camera_noise:
+  cam1:
+    jitter_px_sigma: 5.843694593018047
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam2:
+    jitter_px_sigma: 18.423355217992793
+    split_rate: 0.0
+    merge_rate: 0.07515657620041755
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam3:
+    jitter_px_sigma: 4.221638453267714
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam4:
+    jitter_px_sigma: 15.67896041381733
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam5:
+    jitter_px_sigma: 49.092803249518056
+    split_rate: 0.0
+    merge_rate: 0.2195121951219512
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam6:
+    jitter_px_sigma: 2.676683026011489
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179

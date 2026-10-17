@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pccv-bench"
+version = "1.2.0"
+description = "A fully synthetic benchmark for process-conditioned consistency verification."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+urls = { Repository = "https://github.com/VAGOsolutions/pccv-bench" }
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "opencv-python-headless>=4.5,<4.14",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["pccv_bench*"]
+
+[tool.setuptools.package-data]
+pccv_bench = ["configs/*.yaml", "frozen_operating_point.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["pccv_bench/tests"]

@@ -1,0 +1,10 @@
+{
+  "frozen": {
+    "metric": "iou",
+    "threshold": 0.7,
+    "correction_offset_mm": 600.0,
+    "use_temporal": true,
+    "twoway_threshold": 0.4
+  },
+  "note": "Operating point of the companion real-data study, fixed before any evaluation-split result was read. `--frozen-operating-point` scores every arm, baselines included, at these settings."
+}

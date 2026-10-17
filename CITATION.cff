@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use PCCV-Bench, please cite it as below."
+title: "PCCV-Bench: A Synthetic Benchmark for Process-Conditioned Consistency Verification"
+type: software
+version: "1.2.0"
+license: Apache-2.0
+authors:
+  - family-names: "Navid"
+    given-names: "Shayekh Mohiuddin Ahmed"
+  - family-names: "Eichhorn"
+    given-names: "Kathrin"
+  - family-names: "Vaziri"
+    given-names: "Daryoush Daniel"
+  - family-names: "Golchinfar"
+    given-names: "David Habib"
+  - family-names: "Kern"
+    given-names: "Dean-Robin"
+repository-code: "https://github.com/VAGOsolutions/pccv-bench"
+# doi: add the archive DOI once minted

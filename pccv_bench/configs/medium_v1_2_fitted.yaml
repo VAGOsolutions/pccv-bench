@@ -1,0 +1,78 @@
+# PCCV-Bench medium tier, noise fitted per camera from the measured error
+# statistics of one frozen detector on a chronological test split. Jitter,
+# split, merge, and false-positive-size parameters are fitted per camera; any
+# camera-mechanism pair with too few samples to trust falls back to the pooled
+# rate (the per-camera comments below say which). miss_rate and fp_rate stay
+# pooled. See docs/NOISE_MODEL.md.
+noise_version: v1.2-fitted
+n_instances_per_class: 240
+seed: 42
+occlusion_rate: 0.10
+twoway_threshold: 0.7
+cameras:
+  - cam1
+  - cam2
+  - cam3
+  - cam4
+  - cam5
+  - cam6
+noise:
+  miss_rate: 0.23799582463465552
+  fp_rate: 0.011673151750972763
+  fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  jitter_px_sigma: 14.533524593584483
+  split_rate: 0.0
+  merge_rate: 0.05010438413361169
+  score_mean: 0.75
+  score_sigma: 0.12
+per_camera_noise:
+  # n_gt_boxes=71, n_jitter_samples=280 -- own jitter fit used; n_gt_boxes=71
+  # >=30 -- own split/merge rates used (both 0 events observed on this
+  # camera); n_fp_boxes=2 <10 -- fp_size_frac falls back to pooled.
+  cam1:
+    jitter_px_sigma: 3.8957963953453647
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  # n_gt_boxes=22 <30 -- split/merge rates fall back to pooled;
+  # n_jitter_samples=84 >=40 -- own jitter fit used; n_fp_boxes=4 <10 --
+  # fp_size_frac falls back to pooled.
+  cam2:
+    jitter_px_sigma: 12.282236811995194
+    split_rate: 0.0
+    merge_rate: 0.05010438413361169
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  # n_gt_boxes=92, n_jitter_samples=356 -- own jitter/split/merge fits used
+  # (0 split/merge events observed); n_fp_boxes=3 <10 -- fp_size_frac falls
+  # back to pooled.
+  cam3:
+    jitter_px_sigma: 2.8144256355118094
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  # n_gt_boxes=61, n_jitter_samples=228 -- own jitter/split/merge fits used
+  # (0 split/merge events observed); n_fp_boxes=0 <10 -- fp_size_frac falls
+  # back to pooled.
+  cam4:
+    jitter_px_sigma: 10.45264027587822
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  # n_gt_boxes=164, n_jitter_samples=240 -- own jitter/split/merge fits
+  # used; all 24 pooled merge events measured on this dataset occurred on
+  # this camera alone (merge_rate 0.146 vs 0.0 on every other camera) --
+  # the single biggest per-camera finding of this pass. n_fp_boxes=0 <10 --
+  # fp_size_frac falls back to pooled.
+  cam5:
+    jitter_px_sigma: 32.728535499678706
+    split_rate: 0.0
+    merge_rate: 0.14634146341463414
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]
+  # n_gt_boxes=69, n_jitter_samples=272 -- own jitter/split/merge fits used
+  # (0 split/merge events observed); n_fp_boxes=0 <10 -- fp_size_frac falls
+  # back to pooled.
+  cam6:
+    jitter_px_sigma: 1.7844553506743261
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac: [0.00257664988732024, 0.03846909753983179]

@@ -1,0 +1,632 @@
+{
+  "git_revision": "17bc3c8f8e46eb33cda38b1dd2891ee5d5597fe1",
+  "frozen_config": {
+    "metric": "iou",
+    "threshold": 0.7,
+    "correction_offset_mm": 600.0,
+    "use_temporal": true,
+    "twoway_threshold": 0.4
+  },
+  "arms_13": [
+    "baseline_envelope",
+    "baseline_symmetric",
+    "baseline_coherent",
+    "baseline_pairwise",
+    "geometry",
+    "+offset",
+    "+temporal",
+    "+offset+temporal",
+    "geometry+twoway",
+    "+offset+twoway",
+    "+temporal+twoway",
+    "+all+twoway",
+    "+all+twoway+offset_aware"
+  ],
+  "ladder_5": [
+    "geometry",
+    "+offset",
+    "+temporal",
+    "+offset+temporal",
+    "+all+twoway"
+  ],
+  "metrics": [
+    "pooled_detection",
+    "clean_flag_rate",
+    "class:missing_part",
+    "class:ghost_part",
+    "class:position_shift_x_inbound",
+    "class:position_shift_out",
+    "class:snapshot_desync",
+    "class:composition_swap"
+  ],
+  "results": {
+    "13_arm": {
+      "pooled_detection": {
+        "real_rates": {
+          "baseline_envelope": 0.9102605339337407,
+          "baseline_symmetric": 0.9974268253457703,
+          "baseline_coherent": 0.9552910903827597,
+          "baseline_pairwise": 0.9967835316822129,
+          "geometry": 0.5046638790607912,
+          "+offset": 0.4429076873592795,
+          "+temporal": 0.484078481826954,
+          "+offset+temporal": 0.4380829848825989,
+          "geometry+twoway": 0.9430685107751688,
+          "+offset+twoway": 0.9105821807655194,
+          "+temporal+twoway": 0.9337407526535864,
+          "+all+twoway": 0.9083306529430685,
+          "+all+twoway+offset_aware": 0.8951431328401416
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 0.9770833333333333,
+          "baseline_symmetric": 0.9885416666666667,
+          "baseline_coherent": 0.984375,
+          "baseline_pairwise": 0.9854166666666667,
+          "geometry": 0.7114583333333333,
+          "+offset": 0.6947916666666667,
+          "+temporal": 0.7114583333333333,
+          "+offset+temporal": 0.6947916666666667,
+          "geometry+twoway": 0.978125,
+          "+offset+twoway": 0.971875,
+          "+temporal+twoway": 0.978125,
+          "+all+twoway": 0.971875,
+          "+all+twoway+offset_aware": 0.9635416666666666
+        },
+        "spearman_rho": 0.9862028968960463,
+        "kendall_tau_b": 0.9476966276867814,
+        "kendall_tau_b_asymptotic_p": 9.612595513150979e-06,
+        "permutation_p_value": 9.99990000099999e-06,
+        "rho_ci95": [
+          0.9294685824330092,
+          0.9944903161976939
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "clean_flag_rate": {
+        "real_rates": {
+          "baseline_envelope": 0.22371064969859344,
+          "baseline_symmetric": 0.41995981245813796,
+          "baseline_coherent": 0.4012056262558607,
+          "baseline_pairwise": 0.36905559276624245,
+          "geometry": 0.0884125920964501,
+          "+offset": 0.041527126590756865,
+          "+temporal": 0.07032819825853985,
+          "+offset+temporal": 0.04018754186202277,
+          "geometry+twoway": 0.11520428667113194,
+          "+offset+twoway": 0.06898861352980576,
+          "+temporal+twoway": 0.09845947756195579,
+          "+all+twoway": 0.06898861352980576,
+          "+all+twoway+offset_aware": 0.05827193569993302
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 0.4791666666666667,
+          "baseline_symmetric": 0.5375,
+          "baseline_coherent": 0.525,
+          "baseline_pairwise": 0.5291666666666667,
+          "geometry": 0.2125,
+          "+offset": 0.17916666666666667,
+          "+temporal": 0.20833333333333334,
+          "+offset+temporal": 0.175,
+          "geometry+twoway": 0.3875,
+          "+offset+twoway": 0.35833333333333334,
+          "+temporal+twoway": 0.3875,
+          "+all+twoway": 0.35833333333333334,
+          "+all+twoway+offset_aware": 0.3541666666666667
+        },
+        "spearman_rho": 0.9103456935516068,
+        "kendall_tau_b": 0.8104748277048031,
+        "kendall_tau_b_asymptotic_p": 0.00014257126360580404,
+        "permutation_p_value": 3.999960000399996e-05,
+        "rho_ci95": [
+          0.885518083727472,
+          0.9544836665722907
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "class:missing_part": {
+        "real_rates": {
+          "baseline_envelope": 0.9676923076923077,
+          "baseline_symmetric": 0.9969230769230769,
+          "baseline_coherent": 0.963076923076923,
+          "baseline_pairwise": 0.9938461538461538,
+          "geometry": 0.8415384615384616,
+          "+offset": 0.7384615384615385,
+          "+temporal": 0.8092307692307692,
+          "+offset+temporal": 0.7276923076923076,
+          "geometry+twoway": 0.8476923076923077,
+          "+offset+twoway": 0.7507692307692307,
+          "+temporal+twoway": 0.8184615384615385,
+          "+all+twoway": 0.7415384615384616,
+          "+all+twoway+offset_aware": 0.7307692307692307
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 1.0,
+          "baseline_symmetric": 1.0,
+          "baseline_coherent": 0.9916666666666667,
+          "baseline_pairwise": 1.0,
+          "geometry": 0.9916666666666667,
+          "+offset": 0.9791666666666666,
+          "+temporal": 0.9916666666666667,
+          "+offset+temporal": 0.9791666666666666,
+          "geometry+twoway": 0.9958333333333333,
+          "+offset+twoway": 0.9833333333333333,
+          "+temporal+twoway": 0.9958333333333333,
+          "+all+twoway": 0.9833333333333333,
+          "+all+twoway+offset_aware": 0.9791666666666666
+        },
+        "spearman_rho": 0.9385557895898807,
+        "kendall_tau_b": 0.8438109023249879,
+        "kendall_tau_b_asymptotic_p": 0.0001361914691117442,
+        "permutation_p_value": 3.999960000399996e-05,
+        "rho_ci95": [
+          0.7010681840159741,
+          0.9679028315803947
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "class:ghost_part": {
+        "real_rates": {
+          "baseline_envelope": 0.8707250341997264,
+          "baseline_symmetric": 1.0,
+          "baseline_coherent": 0.9261285909712722,
+          "baseline_pairwise": 1.0,
+          "geometry": 0.08823529411764706,
+          "+offset": 0.04103967168262654,
+          "+temporal": 0.0704514363885089,
+          "+offset+temporal": 0.03967168262653899,
+          "geometry+twoway": 1.0,
+          "+offset+twoway": 1.0,
+          "+temporal+twoway": 1.0,
+          "+all+twoway": 1.0,
+          "+all+twoway+offset_aware": 0.9808481532147743
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 0.9875,
+          "baseline_symmetric": 1.0,
+          "baseline_coherent": 1.0,
+          "baseline_pairwise": 1.0,
+          "geometry": 0.19166666666666668,
+          "+offset": 0.15416666666666667,
+          "+temporal": 0.19166666666666668,
+          "+offset+temporal": 0.15416666666666667,
+          "geometry+twoway": 1.0,
+          "+offset+twoway": 1.0,
+          "+temporal+twoway": 1.0,
+          "+all+twoway": 1.0,
+          "+all+twoway+offset_aware": 0.975
+        },
+        "spearman_rho": 0.9265922601234324,
+        "kendall_tau_b": 0.8664002254439634,
+        "kendall_tau_b_asymptotic_p": 0.000311251691065508,
+        "permutation_p_value": 8.99991000089999e-05,
+        "rho_ci95": [
+          0.859712024354878,
+          0.9391989575400779
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "class:position_shift_x_inbound": {
+        "real_rates": {
+          "baseline_envelope": 0.9060773480662984,
+          "baseline_symmetric": 0.9820441988950276,
+          "baseline_coherent": 0.8853591160220995,
+          "baseline_pairwise": 0.9806629834254144,
+          "geometry": 0.8149171270718232,
+          "+offset": 0.40331491712707185,
+          "+temporal": 0.7720994475138122,
+          "+offset+temporal": 0.39779005524861877,
+          "geometry+twoway": 0.9378453038674033,
+          "+offset+twoway": 0.7154696132596685,
+          "+temporal+twoway": 0.8977900552486188,
+          "+all+twoway": 0.7113259668508287,
+          "+all+twoway+offset_aware": 0.5303867403314917
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 1.0,
+          "baseline_symmetric": 1.0,
+          "baseline_coherent": 0.9083333333333333,
+          "baseline_pairwise": 1.0,
+          "geometry": 0.8291666666666667,
+          "+offset": 0.5666666666666667,
+          "+temporal": 0.8291666666666667,
+          "+offset+temporal": 0.5666666666666667,
+          "geometry+twoway": 1.0,
+          "+offset+twoway": 1.0,
+          "+temporal+twoway": 1.0,
+          "+all+twoway": 1.0,
+          "+all+twoway+offset_aware": 0.7916666666666666
+        },
+        "spearman_rho": 0.737095401929035,
+        "kendall_tau_b": 0.6565076777938936,
+        "kendall_tau_b_asymptotic_p": 0.003928996825690786,
+        "permutation_p_value": 0.005909940900590994,
+        "rho_ci95": [
+          0.6711763009435116,
+          0.7391287724182063
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "class:position_shift_out": {
+        "real_rates": {
+          "baseline_envelope": 0.9696551724137931,
+          "baseline_symmetric": 0.993103448275862,
+          "baseline_coherent": 0.9917241379310345,
+          "baseline_pairwise": 0.993103448275862,
+          "geometry": 0.9406896551724138,
+          "+offset": 0.9241379310344827,
+          "+temporal": 0.9393103448275862,
+          "+offset+temporal": 0.9241379310344827,
+          "geometry+twoway": 0.9544827586206897,
+          "+offset+twoway": 0.9379310344827586,
+          "+temporal+twoway": 0.953103448275862,
+          "+all+twoway": 0.9379310344827586,
+          "+all+twoway+offset_aware": 0.9379310344827586
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 0.9583333333333334,
+          "baseline_symmetric": 0.9583333333333334,
+          "baseline_coherent": 0.95,
+          "baseline_pairwise": 0.9583333333333334,
+          "geometry": 0.8041666666666667,
+          "+offset": 0.8041666666666667,
+          "+temporal": 0.8041666666666667,
+          "+offset+temporal": 0.8041666666666667,
+          "geometry+twoway": 0.9583333333333334,
+          "+offset+twoway": 0.9583333333333334,
+          "+temporal+twoway": 0.9583333333333334,
+          "+all+twoway": 0.9583333333333334,
+          "+all+twoway+offset_aware": 0.9583333333333334
+        },
+        "spearman_rho": 0.4245712044345557,
+        "kendall_tau_b": 0.3528923366202928,
+        "kendall_tau_b_asymptotic_p": 0.14819377150763613,
+        "permutation_p_value": 0.15329846701532984,
+        "rho_ci95": [
+          0.3972912981514376,
+          0.8107424811779119
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:snapshot_desync": {
+        "real_rates": {
+          "baseline_envelope": 0.9081455805892548,
+          "baseline_symmetric": 0.9774696707105719,
+          "baseline_coherent": 0.6533795493934142,
+          "baseline_pairwise": 0.975736568457539,
+          "geometry": 0.658578856152513,
+          "+offset": 0.5736568457538995,
+          "+temporal": 0.2097053726169844,
+          "+offset+temporal": 0.17504332755632582,
+          "geometry+twoway": 0.9532062391681109,
+          "+offset+twoway": 0.8873483535528596,
+          "+temporal+twoway": 0.6759098786828422,
+          "+all+twoway": 0.6551126516464472,
+          "+all+twoway+offset_aware": 0.6360485268630849
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 1.0,
+          "baseline_symmetric": 1.0,
+          "baseline_coherent": 0.6166666666666667,
+          "baseline_pairwise": 1.0,
+          "geometry": 0.6458333333333334,
+          "+offset": 0.6375,
+          "+temporal": 0.4125,
+          "+offset+temporal": 0.4083333333333333,
+          "geometry+twoway": 1.0,
+          "+offset+twoway": 1.0,
+          "+temporal+twoway": 1.0,
+          "+all+twoway": 1.0,
+          "+all+twoway+offset_aware": 1.0
+        },
+        "spearman_rho": 0.773690467031558,
+        "kendall_tau_b": 0.6725382459813659,
+        "kendall_tau_b_asymptotic_p": 0.0032253231423286883,
+        "permutation_p_value": 0.003229967700322997,
+        "rho_ci95": [
+          0.6430156348417392,
+          0.8719919340780659
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      },
+      "class:composition_swap": {
+        "real_rates": {
+          "baseline_envelope": 0.8272058823529411,
+          "baseline_symmetric": 0.9963235294117647,
+          "baseline_coherent": 0.9963235294117647,
+          "baseline_pairwise": 0.9963235294117647,
+          "geometry": 0.7757352941176471,
+          "+offset": 0.6139705882352942,
+          "+temporal": 0.7169117647058824,
+          "+offset+temporal": 0.5919117647058824,
+          "geometry+twoway": 0.8345588235294118,
+          "+offset+twoway": 0.7389705882352942,
+          "+temporal+twoway": 0.8014705882352942,
+          "+all+twoway": 0.7352941176470589,
+          "+all+twoway+offset_aware": 0.7132352941176471
+        },
+        "synthetic_rates": {
+          "baseline_envelope": 0.9625,
+          "baseline_symmetric": 0.9958333333333333,
+          "baseline_coherent": 0.9958333333333333,
+          "baseline_pairwise": 0.9833333333333333,
+          "geometry": 0.8583333333333333,
+          "+offset": 0.8416666666666667,
+          "+temporal": 0.8583333333333333,
+          "+offset+temporal": 0.8416666666666667,
+          "geometry+twoway": 0.9583333333333334,
+          "+offset+twoway": 0.9458333333333333,
+          "+temporal+twoway": 0.9583333333333334,
+          "+all+twoway": 0.9458333333333333,
+          "+all+twoway+offset_aware": 0.9416666666666667
+        },
+        "spearman_rho": 0.9318506926549035,
+        "kendall_tau_b": 0.8243996016473728,
+        "kendall_tau_b_asymptotic_p": 0.00015578534146201367,
+        "permutation_p_value": 9.99990000099999e-06,
+        "rho_ci95": [
+          0.824509530898967,
+          0.9650434597578016
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "supported"
+      }
+    },
+    "5_arm_ladder": {
+      "pooled_detection": {
+        "real_rates": {
+          "geometry": 0.5046638790607912,
+          "+offset": 0.4429076873592795,
+          "+temporal": 0.484078481826954,
+          "+offset+temporal": 0.4380829848825989,
+          "+all+twoway": 0.9083306529430685
+        },
+        "synthetic_rates": {
+          "geometry": 0.7114583333333333,
+          "+offset": 0.6947916666666667,
+          "+temporal": 0.7114583333333333,
+          "+offset+temporal": 0.6947916666666667,
+          "+all+twoway": 0.971875
+        },
+        "spearman_rho": 0.9486832980505138,
+        "kendall_tau_b": 0.8944271909999159,
+        "kendall_tau_b_asymptotic_p": 0.0367138563627041,
+        "permutation_p_value": 0.06730932690673093,
+        "rho_ci95": [
+          0.9486832980505138,
+          0.9486832980505138
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "clean_flag_rate": {
+        "real_rates": {
+          "geometry": 0.0884125920964501,
+          "+offset": 0.041527126590756865,
+          "+temporal": 0.07032819825853985,
+          "+offset+temporal": 0.04018754186202277,
+          "+all+twoway": 0.06898861352980576
+        },
+        "synthetic_rates": {
+          "geometry": 0.2125,
+          "+offset": 0.17916666666666667,
+          "+temporal": 0.20833333333333334,
+          "+offset+temporal": 0.175,
+          "+all+twoway": 0.35833333333333334
+        },
+        "spearman_rho": 0.7,
+        "kendall_tau_b": 0.6,
+        "kendall_tau_b_asymptotic_p": 0.23333333333333334,
+        "permutation_p_value": 0.23478765212347877,
+        "rho_ci95": [
+          0.6324555320336759,
+          0.9
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:missing_part": {
+        "real_rates": {
+          "geometry": 0.8415384615384616,
+          "+offset": 0.7384615384615385,
+          "+temporal": 0.8092307692307692,
+          "+offset+temporal": 0.7276923076923076,
+          "+all+twoway": 0.7415384615384616
+        },
+        "synthetic_rates": {
+          "geometry": 0.9916666666666667,
+          "+offset": 0.9791666666666666,
+          "+temporal": 0.9916666666666667,
+          "+offset+temporal": 0.9791666666666666,
+          "+all+twoway": 0.9833333333333333
+        },
+        "spearman_rho": 0.9486832980505138,
+        "kendall_tau_b": 0.8944271909999159,
+        "kendall_tau_b_asymptotic_p": 0.0367138563627041,
+        "permutation_p_value": 0.06738932610673894,
+        "rho_ci95": [
+          0.0,
+          0.9486832980505138
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:ghost_part": {
+        "real_rates": {
+          "geometry": 0.08823529411764706,
+          "+offset": 0.04103967168262654,
+          "+temporal": 0.0704514363885089,
+          "+offset+temporal": 0.03967168262653899,
+          "+all+twoway": 1.0
+        },
+        "synthetic_rates": {
+          "geometry": 0.19166666666666668,
+          "+offset": 0.15416666666666667,
+          "+temporal": 0.19166666666666668,
+          "+offset+temporal": 0.15416666666666667,
+          "+all+twoway": 1.0
+        },
+        "spearman_rho": 0.9486832980505138,
+        "kendall_tau_b": 0.8944271909999159,
+        "kendall_tau_b_asymptotic_p": 0.0367138563627041,
+        "permutation_p_value": 0.06730932690673093,
+        "rho_ci95": [
+          0.9486832980505138,
+          0.9733285267845753
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:position_shift_x_inbound": {
+        "real_rates": {
+          "geometry": 0.8149171270718232,
+          "+offset": 0.40331491712707185,
+          "+temporal": 0.7720994475138122,
+          "+offset+temporal": 0.39779005524861877,
+          "+all+twoway": 0.7113259668508287
+        },
+        "synthetic_rates": {
+          "geometry": 0.8291666666666667,
+          "+offset": 0.5666666666666667,
+          "+temporal": 0.8291666666666667,
+          "+offset+temporal": 0.5666666666666667,
+          "+all+twoway": 1.0
+        },
+        "spearman_rho": 0.6324555320336759,
+        "kendall_tau_b": 0.4472135954999579,
+        "kendall_tau_b_asymptotic_p": 0.2962698714842864,
+        "permutation_p_value": 0.26897731022689775,
+        "rho_ci95": [
+          0.6324555320336759,
+          0.6324555320336759
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:position_shift_out": {
+        "real_rates": {
+          "geometry": 0.9406896551724138,
+          "+offset": 0.9241379310344827,
+          "+temporal": 0.9393103448275862,
+          "+offset+temporal": 0.9241379310344827,
+          "+all+twoway": 0.9379310344827586
+        },
+        "synthetic_rates": {
+          "geometry": 0.8041666666666667,
+          "+offset": 0.8041666666666667,
+          "+temporal": 0.8041666666666667,
+          "+offset+temporal": 0.8041666666666667,
+          "+all+twoway": 0.9583333333333334
+        },
+        "spearman_rho": 0.0,
+        "kendall_tau_b": 0.0,
+        "kendall_tau_b_asymptotic_p": 1.0,
+        "permutation_p_value": 1.0,
+        "rho_ci95": [
+          0.0,
+          0.7453559924999299
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "absent"
+      },
+      "class:snapshot_desync": {
+        "real_rates": {
+          "geometry": 0.658578856152513,
+          "+offset": 0.5736568457538995,
+          "+temporal": 0.2097053726169844,
+          "+offset+temporal": 0.17504332755632582,
+          "+all+twoway": 0.6551126516464472
+        },
+        "synthetic_rates": {
+          "geometry": 0.6458333333333334,
+          "+offset": 0.6375,
+          "+temporal": 0.4125,
+          "+offset+temporal": 0.4083333333333333,
+          "+all+twoway": 1.0
+        },
+        "spearman_rho": 0.8999999999999998,
+        "kendall_tau_b": 0.7999999999999999,
+        "kendall_tau_b_asymptotic_p": 0.08333333333333333,
+        "permutation_p_value": 0.08345916540834591,
+        "rho_ci95": [
+          0.7905694150420948,
+          1.0
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      },
+      "class:composition_swap": {
+        "real_rates": {
+          "geometry": 0.7757352941176471,
+          "+offset": 0.6139705882352942,
+          "+temporal": 0.7169117647058824,
+          "+offset+temporal": 0.5919117647058824,
+          "+all+twoway": 0.7352941176470589
+        },
+        "synthetic_rates": {
+          "geometry": 0.8583333333333333,
+          "+offset": 0.8416666666666667,
+          "+temporal": 0.8583333333333333,
+          "+offset+temporal": 0.8416666666666667,
+          "+all+twoway": 0.9458333333333333
+        },
+        "spearman_rho": 0.7905694150420948,
+        "kendall_tau_b": 0.6708203932499368,
+        "kendall_tau_b_asymptotic_p": 0.11718508719813799,
+        "permutation_p_value": 0.13564864351356487,
+        "rho_ci95": [
+          0.6324555320336759,
+          0.9486832980505138
+        ],
+        "rho_ci_n_boot": 10000,
+        "reading_rule_category": "weak"
+      }
+    }
+  },
+  "seed_stability_check": {
+    "seed_files": [
+      "results_medium_v1_2_fitted_seed0_aligned.json",
+      "results_medium_v1_2_fitted_seed1_aligned.json",
+      "results_medium_v1_2_fitted_seed2_aligned.json",
+      "results_medium_v1_2_fitted_seed3_aligned.json",
+      "results_medium_v1_2_fitted_seed4_aligned.json",
+      "results_medium_v1_2_fitted_seed5_aligned.json",
+      "results_medium_v1_2_fitted_seed6_aligned.json",
+      "results_medium_v1_2_fitted_seed7_aligned.json",
+      "results_medium_v1_2_fitted_seed8_aligned.json",
+      "results_medium_v1_2_fitted_seed9_aligned.json"
+    ],
+    "per_seed_rho": [
+      0.9600082188927043,
+      0.9821192234671022,
+      0.9530532196894566,
+      0.977873101840337,
+      0.9544909302783784,
+      0.9601109495518729,
+      0.9600082188927043,
+      0.9834748062012769,
+      0.9502907465889073,
+      0.9615384615384615
+    ],
+    "seed42_rho": 0.9862028968960463,
+    "per_seed_reading_rule_category_using_seed42_ci_and_p": [
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported",
+      "supported"
+    ],
+    "category_stable_across_seeds": true
+  }
+}

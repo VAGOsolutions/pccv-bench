@@ -1,0 +1,166 @@
+git revision:   f77df32c5a09408d83a09a8de13e4a9f83b4e69b
+config:         pccv_bench/configs/medium_v1_2_fitted.yaml (hash e33b12f8ddf32f93)
+noise version:  v1.2-fitted
+instances:      1680
+
+arm                         n  frames  clust           detect   false-err(clean)
+--------------------------------------------------------------------------------
+flag_none                1680     557    557    0.000 (n=960)      0.000 (n=240)
+flag_all                 1680     557    557    1.000 (n=960)      1.000 (n=240)
+baseline_envelope        1680     557    557    0.977 (n=960)      0.479 (n=240)
+baseline_symmetric       1680     557    557    0.989 (n=960)      0.537 (n=240)
+baseline_coherent        1680     557    557    0.984 (n=960)      0.525 (n=240)
+baseline_pairwise        1680     557    557    0.985 (n=960)      0.529 (n=240)
+geometry                 1680     557    557    0.712 (n=960)      0.212 (n=240)
++offset                  1680     557    557    0.695 (n=960)      0.179 (n=240)
++temporal                1680     557    557    0.712 (n=960)      0.208 (n=240)
++offset+temporal         1680     557    557    0.695 (n=960)      0.175 (n=240)
+geometry+twoway          1680     557    557    0.978 (n=960)      0.388 (n=240)
++offset+twoway           1680     557    557    0.972 (n=960)      0.358 (n=240)
++temporal+twoway         1680     557    557    0.978 (n=960)      0.388 (n=240)
++all+twoway              1680     557    557    0.972 (n=960)      0.358 (n=240)
++all+twoway+offset_aware   1680     557    557    0.964 (n=960)      0.354 (n=240)
+
+
+  per-class — arm 'baseline_envelope'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.479 (n=240)   [0.412, 0.542]     240    240    0.479    0.000
+    composition_swap                alarm    0.963 (n=240)   [0.938, 0.983]     240    240    0.963    0.000
+    ghost_part                      alarm    0.988 (n=240)   [0.971, 1.000]     240    240    0.988    0.000
+    missing_part                    alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.958    0.000
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+
+  per-class — arm 'baseline_symmetric'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.537 (n=240)   [0.471, 0.600]     240    240    0.537    0.000
+    composition_swap                alarm    0.996 (n=240)   [0.988, 1.000]     240    240    0.996    0.000
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    missing_part                    alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.958    0.000
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+
+  per-class — arm 'baseline_coherent'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.525 (n=240)   [0.458, 0.588]     240    240    0.525    0.000
+    composition_swap                alarm    0.996 (n=240)   [0.988, 1.000]     240    240    0.996    0.000
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    missing_part                    alarm    0.992 (n=240)   [0.979, 1.000]     240    240    0.992    0.000
+    position_shift_out              alarm    0.950 (n=240)   [0.921, 0.975]     240    240    0.950    0.000
+    position_shift_x_inbound         pass    0.908 (n=240)   [0.871, 0.942]     240    240    0.908    0.000
+    snapshot_desync               recover    0.617 (n=240)   [0.558, 0.679]     240    240    0.617    0.000
+
+  per-class — arm 'baseline_pairwise'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.529 (n=240)   [0.463, 0.592]     240    240    0.529    0.000
+    composition_swap                alarm    0.983 (n=240)   [0.967, 0.996]     240    240    0.983    0.000
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    missing_part                    alarm    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.958    0.000
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    1.000    0.000
+
+  per-class — arm 'geometry'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.212 (n=240)   [0.163, 0.267]     240    240    0.212    0.000
+    composition_swap                alarm    0.858 (n=240)   [0.817, 0.900]     240    240    0.858    0.000
+    ghost_part                      alarm    0.192 (n=240)   [0.142, 0.242]     240    240    0.192    0.000
+    missing_part                    alarm    0.992 (n=240)   [0.979, 1.000]     240    240    0.992    0.000
+    position_shift_out              alarm    0.804 (n=240)   [0.754, 0.854]     240    240    0.804    0.000
+    position_shift_x_inbound         pass    0.829 (n=240)   [0.779, 0.875]     240    240    0.829    0.000
+    snapshot_desync               recover    0.646 (n=240)   [0.592, 0.704]     240    240    0.646    0.000
+
+  per-class — arm '+offset'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.179 (n=240)   [0.129, 0.229]     240    240    0.179    0.000
+    composition_swap                alarm    0.842 (n=240)   [0.796, 0.883]     240    240    0.842    0.000
+    ghost_part                      alarm    0.154 (n=240)   [0.108, 0.200]     240    240    0.154    0.000
+    missing_part                    alarm    0.979 (n=240)   [0.963, 0.996]     240    240    0.979    0.000
+    position_shift_out              alarm    0.804 (n=240)   [0.754, 0.854]     240    240    0.804    0.000
+    position_shift_x_inbound         pass    0.567 (n=240)   [0.500, 0.629]     240    240    0.567    0.000
+    snapshot_desync               recover    0.637 (n=240)   [0.579, 0.700]     240    240    0.637    0.000
+
+  per-class — arm '+temporal'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.208 (n=240)   [0.158, 0.263]     240    240    0.208    0.000
+    composition_swap                alarm    0.858 (n=240)   [0.817, 0.900]     240    240    0.858    0.000
+    ghost_part                      alarm    0.192 (n=240)   [0.142, 0.242]     240    240    0.192    0.000
+    missing_part                    alarm    0.992 (n=240)   [0.979, 1.000]     240    240    0.992    0.000
+    position_shift_out              alarm    0.804 (n=240)   [0.754, 0.854]     240    240    0.804    0.000
+    position_shift_x_inbound         pass    0.829 (n=240)   [0.779, 0.875]     240    240    0.829    0.000
+    snapshot_desync               recover    0.412 (n=240)   [0.354, 0.475]     240    240    0.412    0.000
+
+  per-class — arm '+offset+temporal'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.175 (n=240)   [0.125, 0.225]     240    240    0.175    0.000
+    composition_swap                alarm    0.842 (n=240)   [0.796, 0.883]     240    240    0.842    0.000
+    ghost_part                      alarm    0.154 (n=240)   [0.108, 0.200]     240    240    0.154    0.000
+    missing_part                    alarm    0.979 (n=240)   [0.963, 0.996]     240    240    0.979    0.000
+    position_shift_out              alarm    0.804 (n=240)   [0.754, 0.854]     240    240    0.804    0.000
+    position_shift_x_inbound         pass    0.567 (n=240)   [0.500, 0.629]     240    240    0.567    0.000
+    snapshot_desync               recover    0.408 (n=240)   [0.350, 0.471]     240    240    0.408    0.000
+
+  per-class — arm 'geometry+twoway'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.388 (n=240)   [0.325, 0.446]     240    240    0.212    0.263
+    composition_swap                alarm    0.958 (n=240)   [0.929, 0.979]     240    240    0.858    0.463
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    0.192    1.000
+    missing_part                    alarm    0.996 (n=240)   [0.988, 1.000]     240    240    0.992    0.129
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.804    0.883
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    0.829    0.996
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    0.646    0.738
+
+  per-class — arm '+offset+twoway'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.358 (n=240)   [0.300, 0.421]     240    240    0.179    0.263
+    composition_swap                alarm    0.946 (n=240)   [0.912, 0.971]     240    240    0.842    0.463
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    0.154    1.000
+    missing_part                    alarm    0.983 (n=240)   [0.967, 0.996]     240    240    0.979    0.129
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.804    0.883
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    0.567    0.996
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    0.637    0.738
+
+  per-class — arm '+temporal+twoway'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.388 (n=240)   [0.325, 0.446]     240    240    0.208    0.263
+    composition_swap                alarm    0.958 (n=240)   [0.929, 0.979]     240    240    0.858    0.463
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    0.192    1.000
+    missing_part                    alarm    0.996 (n=240)   [0.988, 1.000]     240    240    0.992    0.129
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.804    0.883
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    0.829    0.996
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    0.412    0.738
+
+  per-class — arm '+all+twoway'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.358 (n=240)   [0.300, 0.421]     240    240    0.175    0.263
+    composition_swap                alarm    0.946 (n=240)   [0.912, 0.971]     240    240    0.842    0.463
+    ghost_part                      alarm    1.000 (n=240)   [0.985, 1.000]     240    240    0.154    1.000
+    missing_part                    alarm    0.983 (n=240)   [0.967, 0.996]     240    240    0.979    0.129
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.804    0.883
+    position_shift_x_inbound         pass    1.000 (n=240)   [0.985, 1.000]     240    240    0.567    0.996
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    0.408    0.738
+
+  per-class — arm '+all+twoway+offset_aware'
+    class                          expect          flagged           95% CI  frames  clust      box   record
+    --------------------------------------------------------------------------------------------------------
+    clean                            pass    0.354 (n=240)   [0.292, 0.417]     240    240    0.175    0.246
+    composition_swap                alarm    0.942 (n=240)   [0.908, 0.971]     240    240    0.842    0.417
+    ghost_part                      alarm    0.975 (n=240)   [0.954, 0.992]     240    240    0.154    0.963
+    missing_part                    alarm    0.979 (n=240)   [0.963, 0.996]     240    240    0.979    0.113
+    position_shift_out              alarm    0.958 (n=240)   [0.933, 0.979]     240    240    0.804    0.879
+    position_shift_x_inbound         pass    0.792 (n=240)   [0.742, 0.842]     240    240    0.567    0.725
+    snapshot_desync               recover    1.000 (n=240)   [0.985, 1.000]     240    240    0.408    0.738

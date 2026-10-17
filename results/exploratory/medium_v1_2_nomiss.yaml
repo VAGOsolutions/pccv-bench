@@ -1,0 +1,66 @@
+noise_version: v1.2-fitted-explore-nomiss
+n_instances_per_class: 240
+seed: 42
+occlusion_rate: 0.1
+twoway_threshold: 0.7
+cameras:
+- cam1
+- cam2
+- cam3
+- cam4
+- cam5
+- cam6
+noise:
+  miss_rate: 0.0
+  fp_rate: 0.011673151750972763
+  fp_size_frac:
+  - 0.00257664988732024
+  - 0.03846909753983179
+  jitter_px_sigma: 14.533524593584483
+  split_rate: 0.0
+  merge_rate: 0.05010438413361169
+  score_mean: 0.75
+  score_sigma: 0.12
+per_camera_noise:
+  cam1:
+    jitter_px_sigma: 3.8957963953453647
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam2:
+    jitter_px_sigma: 12.282236811995194
+    split_rate: 0.0
+    merge_rate: 0.05010438413361169
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam3:
+    jitter_px_sigma: 2.8144256355118094
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam4:
+    jitter_px_sigma: 10.45264027587822
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam5:
+    jitter_px_sigma: 32.728535499678706
+    split_rate: 0.0
+    merge_rate: 0.14634146341463414
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179
+  cam6:
+    jitter_px_sigma: 1.7844553506743261
+    split_rate: 0.0
+    merge_rate: 0.0
+    fp_size_frac:
+    - 0.00257664988732024
+    - 0.03846909753983179

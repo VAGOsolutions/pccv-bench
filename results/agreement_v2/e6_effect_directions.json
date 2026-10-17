@@ -1,0 +1,234 @@
+{
+  "git_revision": "86ad56108acab74d4a86e6cd45bf5c1171ae3619",
+  "contrasts": [
+    {
+      "id": "C1",
+      "claim": "The record side catches added parts",
+      "contrast": "+all+twoway - +offset+temporal",
+      "metric": "class:ghost_part",
+      "expected_sign": "+",
+      "real_value": "1.0000 - 0.0397 = +0.9603",
+      "synthetic_difference": 0.8458,
+      "synthetic_ci95": [
+        0.8,
+        0.8917
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C2",
+      "claim": "A second alarm channel raises clean disagreement",
+      "contrast": "+all+twoway - +offset+temporal",
+      "metric": "clean_flag_rate",
+      "expected_sign": "+",
+      "real_value": "0.0690 - 0.0402 = +0.0288",
+      "synthetic_difference": 0.1833,
+      "synthetic_ci95": [
+        0.1375,
+        0.2333
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C3",
+      "claim": "Spatial correction lowers clean disagreement",
+      "contrast": "+offset+twoway - geometry+twoway",
+      "metric": "clean_flag_rate",
+      "expected_sign": "-",
+      "real_value": "0.0690 - 0.1152 = -0.0462",
+      "synthetic_difference": -0.0292,
+      "synthetic_ci95": [
+        -0.0542,
+        -0.0083
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C4",
+      "claim": "Spatial correction lowers in-bound flags",
+      "contrast": "+offset+twoway - geometry+twoway",
+      "metric": "class:position_shift_x_inbound",
+      "expected_sign": "-",
+      "real_value": "0.7155 - 0.9378 = -0.2223",
+      "synthetic_difference": 0.0,
+      "synthetic_ci95": [
+        -0.0153,
+        0.0153
+      ],
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "C5",
+      "claim": "Spatial correction masks missing parts",
+      "contrast": "+offset+twoway - geometry+twoway",
+      "metric": "class:missing_part",
+      "expected_sign": "-",
+      "real_value": "0.7508 - 0.8477 = -0.0969",
+      "synthetic_difference": -0.0125,
+      "synthetic_ci95": [
+        -0.0292,
+        0.0
+      ],
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "C6",
+      "claim": "Temporal retry recovers desync",
+      "contrast": "+temporal+twoway - geometry+twoway",
+      "metric": "class:snapshot_desync",
+      "expected_sign": "-",
+      "real_value": "0.6759 - 0.9532 = -0.2773",
+      "synthetic_difference": 0.0,
+      "synthetic_ci95": [
+        -0.0153,
+        0.0153
+      ],
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "C7",
+      "claim": "The offset-aware record side lowers in-bound flags",
+      "contrast": "+all+twoway+offset_aware - +all+twoway",
+      "metric": "class:position_shift_x_inbound",
+      "expected_sign": "-",
+      "real_value": "0.5304 - 0.7113 = -0.1809",
+      "synthetic_difference": -0.2083,
+      "synthetic_ci95": [
+        -0.2583,
+        -0.1583
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C8",
+      "claim": "...and lowers clean disagreement",
+      "contrast": "+all+twoway+offset_aware - +all+twoway",
+      "metric": "clean_flag_rate",
+      "expected_sign": "-",
+      "real_value": "0.0583 - 0.0690 = -0.0107",
+      "synthetic_difference": -0.0042,
+      "synthetic_ci95": [
+        -0.0125,
+        0.0
+      ],
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "C9",
+      "claim": "...at some missing-part cost",
+      "contrast": "+all+twoway+offset_aware - +all+twoway",
+      "metric": "class:missing_part",
+      "expected_sign": "-",
+      "real_value": "0.7308 - 0.7415 = -0.0107",
+      "synthetic_difference": -0.0042,
+      "synthetic_ci95": [
+        -0.0125,
+        0.0
+      ],
+      "outcome": "inconclusive"
+    },
+    {
+      "id": "C10",
+      "claim": "The box side alone rarely sees added parts",
+      "contrast": "+offset+temporal vs level 0.1",
+      "metric": "class:ghost_part",
+      "expected_sign": "below 0.1",
+      "real_value": "0.0397",
+      "synthetic_difference": 0.1542,
+      "synthetic_ci95": [
+        0.1083,
+        0.2
+      ],
+      "outcome": "disagree"
+    },
+    {
+      "id": "C11",
+      "claim": "At native threshold, symmetric alarms far more on clean data",
+      "contrast": "baseline_symmetric - +all+twoway+offset_aware",
+      "metric": "clean_flag_rate",
+      "expected_sign": "+",
+      "real_value": "0.4200 - 0.0583 = +0.3617",
+      "synthetic_difference": 0.1833,
+      "synthetic_ci95": [
+        0.1333,
+        0.2375
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C12",
+      "claim": "...and so does coherent",
+      "contrast": "baseline_coherent - +all+twoway+offset_aware",
+      "metric": "clean_flag_rate",
+      "expected_sign": "+",
+      "real_value": "0.4012 - 0.0583 = +0.3429",
+      "synthetic_difference": 0.1708,
+      "synthetic_ci95": [
+        0.125,
+        0.2208
+      ],
+      "outcome": "agree"
+    },
+    {
+      "id": "C13",
+      "claim": "At a matched budget the verifier leads on missing parts (from E3)",
+      "contrast": "verifier vs ['symmetric', 'coherent'] (E3)",
+      "metric": "missing_part_recall",
+      "expected_sign": "+",
+      "real_value": "symmetric: +0.1938; coherent: +0.2662 (the real study's matched-budget comparison, Table 2 of the companion manuscript)",
+      "synthetic_difference": [
+        "symmetric: +0.1700 [0.155, 0.1867]",
+        "coherent: +0.1808 [0.1654, 0.1975]"
+      ],
+      "synthetic_ci95": null,
+      "sub_outcomes": {
+        "symmetric": "agree",
+        "coherent": "agree"
+      },
+      "note": "outcome combines both sub-contrasts: agree only if every sub-contrast agrees, disagree if any does",
+      "outcome": "agree"
+    },
+    {
+      "id": "C14",
+      "claim": "At a matched budget the verifier leads on pooled detection (from E3)",
+      "contrast": "verifier vs ['symmetric', 'coherent'] (E3)",
+      "metric": "pooled_detection",
+      "expected_sign": "+",
+      "real_value": "symmetric: +0.1187; coherent: +0.1962 (the real study's matched-budget comparison, Table 2 of the companion manuscript)",
+      "synthetic_difference": [
+        "symmetric: +0.0736 [0.0675, 0.08]",
+        "coherent: +0.0835 [0.0772, 0.0898]"
+      ],
+      "synthetic_ci95": null,
+      "sub_outcomes": {
+        "symmetric": "agree",
+        "coherent": "agree"
+      },
+      "note": "outcome combines both sub-contrasts: agree only if every sub-contrast agrees, disagree if any does",
+      "outcome": "agree"
+    },
+    {
+      "id": "C15",
+      "claim": "At a matched budget coherent keeps the lower pooled false-error (from E3)",
+      "contrast": "verifier vs ['coherent'] (E3)",
+      "metric": "pooled_false_error",
+      "expected_sign": "-",
+      "real_value": "coherent: -0.0713 (the real study's matched-budget comparison, Table 2 of the companion manuscript)",
+      "synthetic_difference": [
+        "coherent: -0.0327 [-0.0415, -0.0231]"
+      ],
+      "synthetic_ci95": null,
+      "sub_outcomes": {
+        "coherent": "agree"
+      },
+      "note": "outcome combines both sub-contrasts: agree only if every sub-contrast agrees, disagree if any does",
+      "outcome": "agree"
+    }
+  ],
+  "headline_counts": {
+    "agree": 9,
+    "inconclusive": 5,
+    "disagree": 1
+  },
+  "n_contrasts": 15
+}

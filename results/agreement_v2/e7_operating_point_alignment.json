@@ -1,0 +1,81 @@
+{
+  "git_revision": "fe748e8b677613ccd0b9298e7501e8ab145bac69-dirty",
+  "real_reference": {
+    "path": "injection_summary.json",
+    "git_revision": "42b2d28cf02d7ee2bf5052cb17a6756f05187230",
+    "n_instances": 5903
+  },
+  "old_run": {
+    "path": "results/results_medium_v1_2_fitted.json",
+    "git_revision": "6ec378f959a5fccb4213769d2707d6f85da85877",
+    "frozen_operating_point": null
+  },
+  "new_run": {
+    "path": "results/results_medium_v1_2_fitted_aligned.json",
+    "git_revision": "fe748e8b677613ccd0b9298e7501e8ab145bac69",
+    "frozen_operating_point": {
+      "metric": "iou",
+      "threshold": 0.7,
+      "correction_offset_mm": 600.0,
+      "use_temporal": true,
+      "twoway_threshold": 0.4
+    }
+  },
+  "ladder_5_arms": [
+    "geometry",
+    "+offset",
+    "+temporal",
+    "+offset+temporal",
+    "+all+twoway"
+  ],
+  "spearman_rho": {
+    "old_misaligned": 0.9746794344808964,
+    "new_aligned": 0.9486832980505138
+  },
+  "pooled_detection_rate": [
+    {
+      "arm": "geometry",
+      "real": 0.5047,
+      "synthetic_old_misaligned": 0.3906,
+      "synthetic_new_aligned": 0.7115
+    },
+    {
+      "arm": "+offset",
+      "real": 0.4429,
+      "synthetic_old_misaligned": 0.3771,
+      "synthetic_new_aligned": 0.6948
+    },
+    {
+      "arm": "+temporal",
+      "real": 0.4841,
+      "synthetic_old_misaligned": 0.3896,
+      "synthetic_new_aligned": 0.7115
+    },
+    {
+      "arm": "+offset+temporal",
+      "real": 0.4381,
+      "synthetic_old_misaligned": 0.3771,
+      "synthetic_new_aligned": 0.6948
+    },
+    {
+      "arm": "+all+twoway",
+      "real": 0.9083,
+      "synthetic_old_misaligned": 0.8667,
+      "synthetic_new_aligned": 0.9719
+    }
+  ],
+  "clean_false_error_rate": [
+    {
+      "arm": "+all+twoway",
+      "real": 0.069,
+      "synthetic_old_misaligned": 0.3292,
+      "synthetic_new_aligned": 0.3583
+    },
+    {
+      "arm": "+all+twoway+offset_aware",
+      "real": 0.0583,
+      "synthetic_old_misaligned": 0.3167,
+      "synthetic_new_aligned": 0.3542
+    }
+  ]
+}
